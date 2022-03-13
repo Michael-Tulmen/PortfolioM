@@ -1,7 +1,8 @@
 :root {
-    --primary-color:##ECF0F1;
-    --secondary-color:#5982A9;
-    --tertiary-color:#60B8DA;
+    --primary-color:rgba(255,255,255,1);
+    --secondary-color:rgba(33,81,59,1);
+    --tertiary-color:rgba(169,41,60,1);
+    --quaternary-color:rgba(229, 231, 233,.75);
 }
 * {
     margin: 0;
@@ -11,40 +12,208 @@
 }
 body {
     color: var(--primary-color);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
+    font-family:'Merriweather', serif;
+}                                                                   
 header {
     display:flex;
     flex-wrap: wrap;
     position: sticky;
     position:-webkit-sticky;
     top: 0;
-    background-image: /*input background image here*/;
+    background-color: var(--primary-color);
     z-index: 9999;
+    max-width: 100%;
+    justify-content: space-between;
+    border-bottom: var(--quaternary-color);
 }
 header h1 {
     font-size: 36px;
-    font-weight: lighter;
+    font-weight: 100;
     color: var(--secondary-color);
     margin: 0;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;  
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    flex-shrink: 3;
+    max-width: 30%;
+}
+header h1 img {
+    flex:1 12%;
+    margin-right: 20px;
+    max-width: 10%;
 }
 header a {
     text-decoration: none;
     color: var(--tertiary-color);
 }
 header a:hover {
-    color: var(--tertiary-color)
+    color: var(--tertiary-color);
+    border-bottom: solid 2px var(--tertiary-color);
+    transition: border-width 0.1s linear;
 }
 header nav {
     margin: 7px 0;
 }
 header nav ul {
     display: flex;
+    margin-top: 15px;
     flex-wrap: wrap;
-    justify-content: space-between;
     list-style: none;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    flex-grow: 3;
 }
-header nav ul li {
+header nav ul li a {
+    font-weight: lighter;
+    font-size: 2vw;
+    text-shadow: none;
     padding: 10px 15px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+footer {
+    Background: var(--tertiary-color);
+    width: 100%;
+    padding: 40px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer h2 {
+    color: var(--secondary-color);
+    Background: var(--tertiary-color);
+    text-align: center;
+    font-size: 15px;
+    margin: 0;
+}
+/* A blanket css class for all section titles*/
+.section-title {
+    font-size: 45px;
+    border-bottom: 3px solid;
+    color: var(--secondary-color);
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    display: flex;
+    flex-wrap: wrap;
+    background: transparent;
+    align-items: center;
+}
+/*About-Me section*/
+.about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+.about-me h2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+.about-me-img {
+    margin: 20px;
+    flex-wrap: wrap;
+    float: right;
+}
+.about-me img {
+    max-width: 100%;
+    border-radius: 25px;
+}
+.about-me p {
+    display: flex;
+    color: black;
+    font-size: 20px;
+    line-height: 1.5;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    flex-wrap: wrap;
+}
+/* End About-Me*/
+/* portfolio Section*/
+.development-portfolio {
+    background-color:var(--secondary-color);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 80%;
+}
+.development-portfolio img {
+    margin: 20px;
+}
+.development-portfolio h2 {
+    color: var(--tertiary-color);
+    background-color: transparent;
+}
+.development-portfolio img {
+    max-width: 100%;
+    padding-bottom: 60px;
+    margin-left: 15px;
+}
+.development-portfolio p {
+    color: black;
+    font-size: 20px;
+    line-height: 1.5;
+    width:80%;
+    margin: 0;
+    text-align: center;
+    background-color: transparent;
+}
+.development-portfolio a {
+    margin-right: 10px;
+    font-size: 25px;
+    color: var(--tertiary-color);
+    background-color: transparent;
+}
+/* End very limited portfolio section*/
+/*Contact Me section */
+.contact-info {
+    background-color:var(--primary-color);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 200px;  
+}
+.contact-info h3 {
+    text-align: center;
+    margin-top: 15px;
+    color:var(--tertiary-color);
+    font-size: 38px;
+    border-bottom: 5px solid var(--secondary-color);
+    flex:auto;
+}
+.contact-info p, .contact-info address {
+    margin: 20px 0;
+    line-height: 1.5;
+    font-size: 16px;
+    font-style: normal;
+    color:var(--secondary-color);
+    text-align: center;
+    flex: auto;
+}
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+    }
+    .contact-info {
+        text-align: center;
+    }
+    .contact-info {
+        flex: 0 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 575px) {
 
 }
