@@ -23,7 +23,7 @@
                         <a href="#aboutme">About Me</a>
                     </li>
                     <li>
-                        <a href="./assets/files/Michael R. Tulmen Resumé 22.pdf" download="Michael R. Tulmen Resumé 22.pdf">Resumé</a>
+                        <a href="./assets/files/Michael R. Tulmen 22 - Swap.pdf" download="Michael R. Tulmen Resumé 22.pdf">Resumé</a>
                     </li>
                     <li>
                         <a href="#portfolio">Development Portfolio</a>
@@ -35,10 +35,11 @@
             </nav>
         </header>
         <!--About me section-->
-        <section id="aboutme" class="about-me">
-            <div>
+        <div>
             <h2 class="section-title">About Me</h2>
             </div>
+        <section id="aboutme" class="about-me">
+           
             <div class="about-me-img">
                 <img src="./assets/images/profile-pic.jpeg" alt="linkedin-profile-picture" />
             </div>
@@ -55,31 +56,59 @@
             <br />
         </section>
         <!--Development Portfolio Section-->
-        <section id="portfolio" class="development-portfolio">
-            <h2 class="section-title">Development Portfolio</h2> 
-            <br /> 
-                <p>The Run-Buddy project is a live website created based on the specifications of a boot camp that I attended in conjunction with Southern 
-                    Methodist University.  <a href="https://michael-tulmen.github.io/Run-Buddy/">Run-Buddy!</a>
-                </p>
-                <br />
-                <p>
-                    More content will be added to this section as the bootcamp progresses and as I take on more projects as a junior developer:
-                </p>
-                <br />
-                <p>
-                    To keep up with my progress please view my github portfolio here!<a href="https://github.com/Michael-Tulmen">GitHub</a>
-                </p>
-                <img src="./assets/images/runbuddy.png" alt="a picture of my runbuddy project thusfar" />
-            </section>
-        <!--Contact Info Section-->
-        <div id="contactme" class="contact-info">
-            <h3>Contact Me!</h3>
-            <p>To get in contact with me directly use the following:</p>
-        <address>
-            Phone Number: 469-422-9570<br />
-            Email address: <a href="mailto:michaeltulmen@me.com">michaeltulmen@me.com</a>
-        </address>
-        </div>
+            <section id="portfolio" class="development-protfolio">
+                <div>
+                <h2 id="development-portfolio">Development Portfolio</h2>
+                </div>
+                <div class="projects">
+                <article class="project">
+                    <img src="./assets/images/passgenny.png" alt="A javascript random strong password generator that makes use of math.random" />
+                    <div class="project-bio">
+                        <h3 class="project-name">Strong Password Generator</h3>
+                        <h4 class="project-role">Math.Random + Concatenating Arrays</h4>
+                        <p>
+                            This project is a random password generator that prompts the user for parameters to include in a rnadomly generated password.
+                            The parameters selected are added to a pool array and thereafter selected using the Math.Random function.
+                    </div>
+                </article>
+               
+                <article class="project">
+                    <img src="./assets/images/runbuddy.png" alt="A website designed in coordination with SMU full stack development bootcamp" />
+                    <div class="project-bio">
+                        <h3 class="project-name">Run Buddy Website</h3>
+                        <h4 class="project-role">Web design using HTML5 and CSS3</h4>
+                        <p>
+                            The Run-Buddy project was my first completed exploration into web development using HTML and CSS.  The design is based on the specifications
+                            of the SMU full stack web development boot camp.
+                        </p>
+                    </div>
+                </article>
+                
+                <article class="project">
+                    <img src="./assets/images/kanban.png" alt="a Kanban task organizer, in progress project using JS and the DOM" />
+                    <div class="project-bio"> 
+                        <h3 class="project-name">Kanban Board</h3>
+                        <h4 class="project-role">Task organizer in progress project for a more organized workspace for my teams</h4>
+                        <p>
+                            As my development journey progresses, the need for further organization or my projects and undertakings becomes more apparent.  
+                            I have commenced development of a Kanban type organization tool that will allow my team and myself keep better track of current projects.
+                        </p>
+                    </div>
+                </article>
+                </div>
+              </section>
+        <section class="contact-info">
+            <div>
+                <h3>Contact Me!</h3>
+            </div>
+            <div>    
+                <p>To get in contact with me directly use the following:</p>
+            </div>
+            <address>
+                Phone Number: 469-422-9570<br />
+                Email address: <a href="mailto:michaeltulmen@me.com">michaeltulmen@me.com</a>
+            </address>
+        </section>
         <!--Footer Section-->
         <footer>
             <h2>Created and Designed by Michael Tulmen</h2>
